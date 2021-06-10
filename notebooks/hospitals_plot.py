@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def hospitals_subplots(hospital_by_date,ys,ylabels,color_codes,palette,ax):
+def hospitals_plot(hospital_by_date,ys,ylabels,color_codes,palette,ax):
     for i in range(len(ys)):
         if color_codes[i] == 'next':
             color = next(palette)
