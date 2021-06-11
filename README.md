@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project provides tools to explore data from [Google's COVID-19 Open Data.](https://github.com/GoogleCloudPlatform/covid-19-open-data) 
+COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project provides tools to explore data from [Google's COVID-19 Open Data.](https://github.com/GoogleCloudPlatform/covid-19-open-data) as well as analysis and hypothesis testing.
 
 ### Built With
 <b>Python 3.9</b>:
@@ -60,12 +60,13 @@ Misc. modules
 * datetime
 * itertools
 
-Custom functions found [here]
+Custom functions found [here](./src/).
 
 ### Repository structure
 * img: Figure image files
 * src: Custom Python functions and Jupyter Notebooks
-A PowerPoint presentation summarizing the data analysis and hypothesis testing results can be found [here](/COVID-19 Symptom Searches and Hospitalizations.pptx)
+
+A PowerPoint presentation summarizing the data analysis and results can be found [here](https://github.com/chrisshaffer/covid-symptom-searches/blob/main/COVID-19%20Symptom%20Searches%20and%20Hospitalizations.pptx).
 
 ## Data
 This project explores 3 tables from the COVID-19 Open Data repo:
@@ -79,23 +80,26 @@ The search trends and hospital tables are joined using location keys and dates.
 ## Features
 * Load data with control over query size
 * Generate plots for EDA to explore variables
-Example of hospitalization data versus time:
-![Aggregated hospitalization data verus time](./img/hospitals_time.png)
+
+  Example of hospitalization data versus time:
+
+  ![Aggregated hospitalization data verus time](./img/hospitals_time.png)
+
 * Hypothesis testing of correlation between Google symptom searches and new hospitalizations
   * By location (country/region)
   * By symptom names
   * By date range
   * By time shift between searches and new hospitalizations
-Example of single test (Time shift: 2 weeks, symptom: fever, location: New York City
-![Hypothesis test](./img/searchs_hist__delay14_ fever_US_NY_NYC.png)
 
-Example of p-value heatmap:
-![p-value heatmap](./img/pvals_US_NY_NYC.png)
+  Example of p-value heatmap:
+
+  ![p-value heatmap](./img/pvals_US_NY_NYC.png)
 
 <!-- Contact -->
 ## Contact
 
 Author: Christopher Shaffer
+
 [Email](christophermshaffer@gmail.com)
 
 [Github](https://github.com/chrisshaffer)
