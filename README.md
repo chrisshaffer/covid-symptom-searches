@@ -19,12 +19,18 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
+      <ul>
+        <li><a href="#repository-structure">Repository Structure</a></li>
+      </ul>
     </li>
     <li>
-      <a href="#data-prep">Data Preparation</a>
+      <a href="#data">Data</a>
     </li>
     <li>
-      <a href="#data-prep">EDA</a>
+      <a href="#features">Features</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
     </li>
   </ol>
 </details>
@@ -34,10 +40,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project explores data from [Google's COVID-19 Open Data.](https://github.com/GoogleCloudPlatform/covid-19-open-data) 
+COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project provides tools to explore data from [Google's COVID-19 Open Data.](https://github.com/GoogleCloudPlatform/covid-19-open-data) 
 
 ### Built With
-<b>Python</b>:
+<b>Python 3.9</b>:
 
 Data modules
 * pandas
@@ -56,39 +62,40 @@ Misc. modules
 
 Custom functions found [here]
 
-```
+### Repository structure
+* img: Figure image files
+* src: Custom Python functions and Jupyter Notebooks
+A PowerPoint presentation summarizing the data analysis and hypothesis testing results can be found [here](/COVID-19 Symptom Searches and Hospitalizations.pptx)
 
-<!-- CONTACT -->
+## Data
+This project explores 3 tables from the COVID-19 Open Data repo:
+* [Search Trends symptoms dataset](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-search-trends.md)
+  * Dimensions: (1 425 194, ~450)
+* [Hospitalization records](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-hospitalizations.md)
+  * Dimensions: (643 715, 11)
+* [Index: keys, codes, and names for countries and regions](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-index.md)
+The search trends and hospital tables are joined using location keys and dates.
+
+## Features
+* Load data with control over query size
+* Generate plots for EDA to explore variables
+Example of hospitalization data versus time:
+![Aggregated hospitalization data verus time](./img/hospitals_time.png)
+* Hypothesis testing of correlation between Google symptom searches and new hospitalizations
+  * By location (country/region)
+  * By symptom names
+  * By date range
+  * By time shift between searches and new hospitalizations
+Example of single test (Time shift: 2 weeks, symptom: fever, location: New York City
+![Hypothesis test](./img/searchs_hist__delay14_ fever_US_NY_NYC.png)
+
+Example of p-value heatmap:
+![p-value heatmap](./img/pvals_US_NY_NYC.png)
+
+<!-- Contact -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Author: Christopher Shaffer
+[Email](christophermshaffer@gmail.com)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[Github](https://github.com/chrisshaffer)
