@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project provides tools to explore data from [Google's COVID-19 Open Data.](https://github.com/GoogleCloudPlatform/covid-19-open-data) as well as analysis and hypothesis testing.
+COVID-19 has been a rapidly evolving pandemic. It is important for hospitals and governments to be able to predict the spread of COVID-19 and future pandemics locally, in order to prepare and allocate resources. This project provides tools to explore data from [Google's COVID-19 Open Data](https://github.com/GoogleCloudPlatform/covid-19-open-data) as well as analysis and hypothesis testing.
 
 ### Built With
 <b>Python 3.9</b>:
